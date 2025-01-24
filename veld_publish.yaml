@@ -32,7 +32,7 @@ services:
     build: .
     volumes:
       - ./veld_publish.sh:/veld/code/veld_publish.sh
-      - ./:/veld/input/
+      - ./data/python_code_base/:/veld/input/
     command: bash /veld/code/veld_publish.sh
     working_dir: /veld/input/
     environment:
