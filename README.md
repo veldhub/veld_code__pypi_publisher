@@ -3,6 +3,9 @@
 This repo contains a [code veld](https://zenodo.org/records/13322913) encapsulating a publishing
 workflow to pypi.org . 
 
+For a demo on how to use it in a chain veld, see: 
+https://github.com/veldhub/veld_chain__demo_pypi_publisher
+
 ## requirements
 
 - git
