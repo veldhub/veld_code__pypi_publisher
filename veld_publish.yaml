@@ -1,8 +1,6 @@
 x-veld:
   code:
-    description: "This code veld encapsulates a publishing workflow to pypi.org . It uses 
-      setuptools and contains a template python module that can be found at 
-      ./data/test_python_module/"
+    description: "This code veld encapsulates a publishing workflow to pypi.org ."
     topic:
       - pypi
       - packaging
@@ -44,7 +42,6 @@ services:
     build: .
     volumes:
       - ./veld_publish.sh:/veld/code/veld_publish.sh
-      - ./data/test_python_module/:/veld/input/
     command: bash /veld/code/veld_publish.sh
     working_dir: /veld/input/
     environment:
