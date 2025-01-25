@@ -26,16 +26,21 @@ x-veld:
             veld yaml file, which docker would automatically load, and then add the `.env` to 
             `.gitignore`!"
         var_type: "str"
+      - environment_var: testing
+        description: "If set to true, it will publish to test.pypi.org . If set to false, it will 
+          publish to pypi.org ."
+        var_type: bool
 
 services:
   veld_publish:
     build: .
     volumes:
       - ./veld_publish.sh:/veld/code/veld_publish.sh
-      - ./data/python_code_base/:/veld/input/
+      - ./data/test_python_module/:/veld/input/
     command: bash /veld/code/veld_publish.sh
     working_dir: /veld/input/
     environment:
-      - TWINE_USERNAME
-      - TWINE_PASSWORD
+      TWINE_USERNAME:
+      TWINE_PASSWORD:
+      testing: true
 
