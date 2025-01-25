@@ -10,6 +10,7 @@ x-veld:
       - environment_var: TWINE_USERNAME
         description: "Contains the username, or better, just `__token__` if a token is used which 
           was created on pypi.org ."
+        default: "__token__"
         var_type: str
       - environment_var: TWINE_PASSWORD
         description: "Contains the password, or better, a token which was created on pypi.org .
@@ -40,7 +41,7 @@ services:
     command: bash /veld/code/veld_publish.sh
     working_dir: /veld/input/
     environment:
-      TWINE_USERNAME:
+      TWINE_USERNAME: __token__
       TWINE_PASSWORD:
       testing: true
 
