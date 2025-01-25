@@ -2,7 +2,7 @@
 
 This repo contains a [code veld](https://zenodo.org/records/13322913) encapsulating a publishing
 workflow to pypi.org . It uses [setuptools](https://setuptools.pypa.io/en/latest/setuptools.html) 
-and a template python module can be found at 
+and contains a template python module that can be found at 
 [./data/test_python_module/](./data/test_python_module/)
 
 ## requirements
